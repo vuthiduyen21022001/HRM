@@ -14,7 +14,9 @@ const employeeSchema = new mongoose.Schema({
 
     },
     position:{
-        type:'string',
+        type:'boolean',
+
+        require:true,
      
     },
     username:{
@@ -32,6 +34,7 @@ const employeeSchema = new mongoose.Schema({
         type:"string",
       
     },
+ 
    
 
 

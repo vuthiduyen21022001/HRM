@@ -4,6 +4,9 @@ import cors from "cors";
 import mongoose from "mongoose";
 import route from "./router/employee.js";
 import routeSalary from "./router/salary.js";
+import routePosition from "./router/positions.js";
+import routeDepartments from "./router/department.js";
+
 const app = express();
 // Khai báo một biến PORT, nếu không được thiết lập, sẽ sử dụng giá trị mặc định là 5000
 const PORT = process.env.port || 5000;
@@ -22,6 +25,8 @@ app.use(cors());
 // Xử lý request GET đến đường dẫn gốc của server
 app.use("/api/employee/", route);
 app.use("/api/salary/",routeSalary);
+app.use("/api/positions/",routePosition);
+app.use("/api/departments/",routeDepartments)
 
 // Kết nối đến cơ sở dữ liệu MongoDB sử dụng thư viện mongoose
 mongoose

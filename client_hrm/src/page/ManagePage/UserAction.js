@@ -5,7 +5,16 @@ import { userService } from "../../service/user.service";
  export default function UserAction({id,OnSucces}){
     // const useParams = useParams()
     const navigate = useNavigate()
-
+    // const addPosts = (post) => {
+    //     userService
+    //        .postManager(post)
+    //        .then((res) => {
+    //          message.success("Thêm thành công");
+    //        })
+    //        .catch((err) => {
+    //          message.error("Thêm không thành công");
+    //        });
+    //    };
 const handleDelete=(id)=>{
     userService.deleteUser(id)
     .then((res)=>{
@@ -24,8 +33,9 @@ const handleEdit=(id)=>{
 
     return(
         <div>
-            <button onClick={()=>handleEdit(id)}>Edit</button>
-            <button onClick={()=>handleDelete(id)}>Delete</button>
+            {/* <button onClick={()=>addPosts()}>Thêm</button> */}
+            <button onClick={()=>handleEdit(id)}>Sửa</button>
+            <button onClick={()=>handleDelete(id)}>Xóa</button>
         </div>
     )
  }

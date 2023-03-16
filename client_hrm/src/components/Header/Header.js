@@ -215,36 +215,7 @@ export default function Header() {
               <FaBars />
             </div>
             <p className="Category_Course"> Quản lý</p>
-            {/* <div className="Course_menu">
-              <ul className="Course_menu_category">
-                <ul className="CourseMenu_list">
-                  <li>
-                    <a href="">Trang cá nhân</a>
-                  </li>
-                  <li>
-                    <a href="">Viết Blog</a>
-                  </li>
-                  <li>
-                    <a href="">Trang cá nhân</a>
-                  </li>
-                  <li>
-                    <a href="">Viết Blog</a>
-                  </li>
-                  <li>
-                    <a href="">Trang cá nhân</a>
-                  </li>
-                  <li>
-                    <a href="">Viết Blog</a>
-                  </li>
-                  <li>
-                    <a href="">Trang cá nhân</a>
-                  </li>
-                  <li>
-                    <a href="">Viết Blog</a>
-                  </li>
-                </ul>
-              </ul>
-            </div> */}
+            {}
           </div>
           <div className="NavSearch">
             <div className="iconSearch">
@@ -263,62 +234,9 @@ export default function Header() {
               <a onClick={handleRegister}>Đăng Ký</a>
             </div>
           </div>
-          {/* <div className="Navbar_portal">
-            <button className="Navbar_myLearn">Khóa học của tôi </button>
-            <div className="Navbar_actionBtn">
-              <FaBell />
-            </div>
-            <img
-              className="Navbar_avatar"
-              src="https://files.fullstack.edu.vn/f8-prod/user_photos/203465/6281ce86b5c0d.jpg"
-              alt=""
-            />
-            <div className="User_menu">
-              <ul className="User_menu_portal">
-                <div className="UserMenu_user">
-                  <img
-                    className="UserMenu_avatar"
-                    src="https://files.fullstack.edu.vn/f8-prod/user_photos/203465/6281ce86b5c0d.jpg"
-                    alt=""
-                  />
-                  <div className="UserMenu_info">
-                    <div className="UserMenu_name">Dieu Plot</div>
-                    <div className="UserMenu_username">dieuplot@gmail.com</div>
-                  </div>
-                </div>
-                <hr />
-                <ul className="UserMenu_list">
-                  <li>
-                    <a href="">Trang cá nhân</a>
-                  </li>
-                </ul>
-                <hr />
-                <ul className="UserMenu_list">
-                  <li>
-                    <a href="">Viết Blog</a>
-                  </li>
-                  <li>
-                    <a href="">Bái viết của tôi</a>
-                  </li>
-                </ul>
-                <hr />
-                <ul className="UserMenu_list">
-                  <li>
-                    <a href="">Bài viết đã lưu</a>
-                  </li>
-                </ul>
-                <hr />
-                <ul className="UserMenu_list">
-                  <li>
-                    <a href="">Cài đặt</a>
-                  </li>
-                  <li>
-                    <a href="">Đăng xuất</a>
-                  </li>
-                </ul>
-              </ul>
-            </div>
-          </div> */}
+          {
+            
+          }
         </div>
       </StyleHeader>
     </div>

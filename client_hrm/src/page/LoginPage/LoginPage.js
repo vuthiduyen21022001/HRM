@@ -1,42 +1,56 @@
 import React from "react";
-
+import { userService } from "../../service/user.service";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { message } from "antd";
 import "./login.css";
 
 export default function LoginPage() {
-  // const [username, setusername] = useState("");
-  // const [password, setpassword] = useState("");
-  // const [post, setpost] = useState([]);
-  // const addPosts = (post) => {
-  //   userService
-  //      .postLogin(post)
-  //      .then((res) => {
-  //        message.success("Thêm thành công");
-  //      })
-  //      .catch((err) => {
-  //        message.error("Thêm không thành công");
-  //      });
-  //  };
-  //  const handleRegister = (e) => {
-  //   e.preventDefault();
-  //   const newUser = {
-  //     username: username,
-  //     password: password,
-  //   };
-  //   addPosts(newUser);
-  // };
+  const history = useNavigate();
+
+  const [username, setusername] = useState("");
+  const [password, setpassword] = useState("");
+
+  const addPosts = (value) => {
+    userService
+      .loginUser(value)
+      .then((res) => {
+        message.success(" Đăng nhập thành công");
+        setTimeout(() => { history("/"); }, 1000)
+      })
+      .catch((err) => {
+        message.error("Đăng nhập không thành công");
+
+      });
+  };
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const newUser = {
+      username: username,
+      password: password,
+    };
+    addPosts(newUser);
+  };
 
   return (
     <div className="main">
       <div className="center">
         <h1>Đăng nhập</h1>
-        <form method="post">
+        <form method="post" onSubmit={handleLogin}>
           <div class="txt_field">
-            <input type="text" required />
+
+            <input
+              onChange={(e) => setusername(e.target.value)}
+              type="text"
+              required />
             <span></span>
             <label>Tên đăng nhập</label>
           </div>
           <div class="txt_field">
-            <input type="password" required />
+            <input
+              onChange={(e) => setpassword(e.target.value)}
+              type="password"
+              required />
             <span></span>
             <label>Mật khẩu</label>
           </div>
